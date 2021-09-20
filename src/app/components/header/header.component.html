@@ -1,0 +1,7 @@
+<header>
+    <a routerLink="">Home</a>
+    <a routerLink="/news">News</a>
+    <a *ngIf="!authorized" routerLink="/login">Login</a>
+    <a *ngIf="authorized" routerLink="/profile">Profile</a>
+    <span *ngIf="authorized" (click)="logOut()">Log Out</span>
+</header>
